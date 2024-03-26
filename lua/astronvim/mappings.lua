@@ -459,4 +459,8 @@ maps.n["<leader>uw"] = { ui.toggle_wrap, desc = "Toggle wrap" }
 maps.n["<leader>uy"] = { ui.toggle_syntax, desc = "Toggle syntax highlighting (buffer)" }
 maps.n["<leader>uh"] = { ui.toggle_foldcolumn, desc = "Toggle foldcolumn" }
 
+if is_available "telescope.nvim" then
+  maps.n["<leader>fd"] = { function() require("telescope.builtin").diagnostics() end, desc = "Find diagnostics" }
+end
+
 utils.set_mappings(astronvim.user_opts("mappings", maps))
