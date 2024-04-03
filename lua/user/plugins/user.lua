@@ -67,6 +67,11 @@ return {
       'smoka7/hop.nvim',
       version = "*",
       opts = {},
+    },
+    {
+      'HiPhish/jinja.vim',
+      version = "*",
+      opts = {},
     }
   }
 }
