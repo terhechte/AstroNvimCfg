@@ -127,6 +127,12 @@ return {
     vim.keymap.set('n', '<C-l>', function()
       vim.cmd(":HopNodes")
     end, {remap=true})
+    vim.keymap.set('v', '<C-i>', function()
+      vim.cmd(":HopWord")
+    end, {remap=true})
+    vim.keymap.set('v', '<C-l>', function()
+      vim.cmd(":HopNodes")
+    end, {remap=true})
 
     --- neovide specific
     --FIXME For t
@@ -141,7 +147,7 @@ return {
       vim.g.neovide_background_color = "#0f1117" .. alpha()
       vim.g.neovide_window_blurred = true
       vim.g.neovide_floating_shadow = false
-      vim.g.neovide_hide_mouse_when_typing = true
+      --vim.g.neovide_hide_mouse_when_typing = true
       vim.g.neovide_show_border = false
     end
 
