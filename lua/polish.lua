@@ -116,6 +116,10 @@ vim.keymap.set('n', '<Leader>fd', function()
   require("telescope.builtin").diagnostics()
 end, {remap=true, desc = "Find Diagnostics"})
 
+vim.keymap.set('n', '<Leader>lo', function()
+  vim.lsp.buf.hover()
+end, {remap=true, desc = "See Signature"})
+
 vim.keymap.set('n', '<Leader>fs', function()
   require("telescope.builtin").lsp_document_symbols()
 end, {remap=true, desc = "Find Document Symbols"})
