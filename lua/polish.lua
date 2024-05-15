@@ -125,12 +125,16 @@ vim.keymap.set('n', '<Leader>fs', function()
 end, {remap=true, desc = "Find Document Symbols"})
 
 vim.keymap.set('n', '<Leader>fS', function()
-  require("telescope.builtin").lsp_workspace_symbols()
+  require("telescope.builtin").lsp_dynamic_workspace_symbols()
 end, {remap=true, desc = "Find Workspace Symbols"})
 
 vim.keymap.set('n', '<Leader>fR', function()
   require("telescope.builtin").lsp_references()
 end, {remap=true, desc = "Find References"})
+
+--vim.keymap.set('n', '<Leader>fS', function()
+--  require("telescope.builtin").lsp_references()
+--end, {remap=true, desc = "Find References"})
 
 vim.keymap.set('v', '<Leader>v', '"+y<cr>gv', {remap=true, desc = "Copy System"})
 vim.keymap.set('n', '<D-s>', '<c-o>:w!<cr>', { desc = "Save File"})
