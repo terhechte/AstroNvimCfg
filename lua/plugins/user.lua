@@ -3,7 +3,24 @@
 
 ---@type LazySpec
 return {
-
+  {
+    {
+      "supermaven-inc/supermaven-nvim",
+      config = function()
+        require("supermaven-nvim").setup({
+          keymaps = {
+            accept_suggestion = "<C-.>",
+            clear_suggestion = "<C-]>",
+          },
+          ignore_filetypes = { md = true },
+          color = {
+            suggestion_color = "#00AAFF",
+            cterm = 244,
+          }
+        })
+      end,
+    },
+  },
   {
       "yorickpeterse/nvim-window",
       config = function()

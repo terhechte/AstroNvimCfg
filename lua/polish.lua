@@ -108,6 +108,7 @@ if vim.g.neovide then
   vim.g.neovide_floating_shadow = false
   --vim.g.neovide_hide_mouse_when_typing = true
   vim.g.neovide_show_border = false
+  vim.opt.guifont = { "IosevkaTermSlab Nerd Font:h17" }
 end
 
 -- Custom mappings
